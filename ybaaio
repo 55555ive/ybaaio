@@ -1,0 +1,14 @@
+-- Coroutine to run the first loadstring (corrected URL)
+coroutine.wrap(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Vezise/vezzyscripts/main/xenonv3_source"))()
+end)()
+
+-- Coroutine to run the second loadstring (corrected URL)
+coroutine.wrap(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Vezise/vezzyscripts/main/ybadestroyer"))()
+end)()
+
+-- Coroutine to run the third loadstring
+coroutine.wrap(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Vezise/vezzyscripts/main/ybaisassv3"))()
+end)()
