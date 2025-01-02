@@ -1,14 +1,41 @@
 -- Coroutine to run the first loadstring (corrected URL)
 coroutine.wrap(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Vezise/vezzyscripts/main/xenonv3_source"))()
+    print("Fetching first script...")
+    local success, result = pcall(function()
+        return game:HttpGet("https://raw.githubusercontent.com/Vezise/vezzyscripts/main/xenonv3_source")
+    end)
+    if success then
+        print("Executing first script...")
+        loadstring(result)()
+    else
+        print("Failed to fetch first script")
+    end
 end)()
 
 -- Coroutine to run the second loadstring (corrected URL)
 coroutine.wrap(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Vezise/vezzyscripts/main/ybadestroyer"))()
+    print("Fetching second script...")
+    local success, result = pcall(function()
+        return game:HttpGet("https://raw.githubusercontent.com/Vezise/vezzyscripts/main/ybadestroyer")
+    end)
+    if success then
+        print("Executing second script...")
+        loadstring(result)()
+    else
+        print("Failed to fetch second script")
+    end
 end)()
 
 -- Coroutine to run the third loadstring
 coroutine.wrap(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Vezise/vezzyscripts/main/ybaisassv3"))()
+    print("Fetching third script...")
+    local success, result = pcall(function()
+        return game:HttpGet("https://raw.githubusercontent.com/Vezise/vezzyscripts/main/ybaisassv3")
+    end)
+    if success then
+        print("Executing third script...")
+        loadstring(result)()
+    else
+        print("Failed to fetch third script")
+    end
 end)()
